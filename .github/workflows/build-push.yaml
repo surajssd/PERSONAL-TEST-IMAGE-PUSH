@@ -40,4 +40,4 @@ jobs:
         context: .
         file: Dockerfile
         push: true
-        tags: ghcr.io/azure/test-image-push/base:${{ steps.tag.outputs.image_tag }}
+        tags: ghcr.io/azure/test-image-push/base:${{ steps.tag.outputs.image_tag }},ghcr.io/azure/test-image-push/base:latest
