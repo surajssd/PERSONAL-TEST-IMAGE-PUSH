@@ -31,6 +31,9 @@ jobs:
       run: |
         echo "image_tag=${{ github.sha }}-$(date '+%Y-%m-%d-%H-%M-%S')" >> $GITHUB_OUTPUT
 
+    - name: Sleeping for 5 minutes
+      run: sleep 300
+
     - name: Base image
       uses: docker/build-push-action@v6
       with:
