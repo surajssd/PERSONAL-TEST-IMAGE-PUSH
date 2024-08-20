@@ -8,7 +8,7 @@ ARG IMAGE_LOCATION=cdpxb787066ec88f4e20ae65e42a858c42ca00.azurecr.io/official/cl
 # Copy from base build
 FROM ${IMAGE_LOCATION}
 
-LABEL org.opencontainers.image.source="https://github.com/Azure/CloudShell"
+LABEL org.opencontainers.image.source="https://github.com/surajssd/PERSONAL-TEST-IMAGE-PUSH"
 
 RUN tdnf clean all && \
     tdnf repolist --refresh && \
