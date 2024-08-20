@@ -37,7 +37,7 @@ jobs:
         context: .
         file: linux/base.Dockerfile
         push: true
-        tags: ghcr.io/azure/personal-test-image-push/base:${{ steps.tag.outputs.image_tag }},ghcr.io/azure/personal-test-image-push/base:latest
+        tags: ghcr.io/surajssd/personal-test-image-push/base:${{ steps.tag.outputs.image_tag }},ghcr.io/surajssd/personal-test-image-push/base:latest
 
     - name: Tools image
       uses: docker/build-push-action@v6
@@ -45,5 +45,5 @@ jobs:
         context: .
         file: linux/tools.Dockerfile
         push: true
-        tags: ghcr.io/azure/personal-test-image-push/tools:${{ steps.tag.outputs.image_tag }},ghcr.io/azure/personal-test-image-push/tools:latest
-        build-args: IMAGE_LOCATION=ghcr.io/azure/personal-test-image-push/base:${{ steps.tag.outputs.image_tag }}
+        tags: ghcr.io/surajssd/personal-test-image-push/tools:${{ steps.tag.outputs.image_tag }},ghcr.io/surajssd/personal-test-image-push/tools:latest
+        build-args: IMAGE_LOCATION=ghcr.io/surajssd/personal-test-image-push/base:${{ steps.tag.outputs.image_tag }}
